@@ -1,0 +1,67 @@
+$breakpoints: (
+  "mobile": (
+    max-width: 767px,
+  ),
+  "smallMobile": (
+    max-width: 575px,
+  ),
+  "iPadPortrait": (
+    max-width: 991px,
+  ),
+  "mediumLandscape": (
+    min-width: 992px,
+  ),
+  "mediumDesktop": (
+    max-width: 1199px,
+  ),
+  "largeDesktopUpTo": (
+    max-width: 1200px,
+  ),
+  "bigDesktop": (
+    min-width: 1400px,
+  ),
+  "maxMedium": (
+    max-width: 1399px,
+  ),
+  "iPadViewMax": (
+    max-width: 768px,
+  ),
+  "iPadViewMin": (
+    min-width: 768px,
+  ),
+  "iPadLandscapeView": (
+    min-width: 1024px,
+  ),
+  "iPadUpTo": (
+    max-width: 1024px,
+  ),
+  "largeDesktop": (
+    min-width: 1201px,
+  ),
+  "responsiveView": (
+    max-width: 1023px,
+  ),
+  "minDesktop": (
+    max-width: 1368px,
+  ),
+  "maxIpad": (
+    max-width: 780px,
+  ),
+) !default;
+
+/// Mixin to manage responsive breakpoints
+@mixin respond-to($breakpoint) {
+  // If the key exists in the map
+  @if map-has-key($breakpoints, $breakpoint) {
+    // Prints a media query based on the value
+    @media #{inspect(map-get($breakpoints, $breakpoint))} {
+      @content;
+    }
+  }
+
+  // If the key doesn't exist in the map
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+          + "Available breakpoints are: #{map-keys($breakpoints)}.";
+  }
+}

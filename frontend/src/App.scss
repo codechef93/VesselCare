@@ -1,0 +1,250 @@
+@import "./scss/_variables.scss";
+@import "./scss/_mixins.scss";
+
+.main {
+  height: 100%;
+  width: 100%;
+  color: $white;
+}
+
+.text {
+  color: $white;
+}
+
+.Abtn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.textmsg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;   
+}
+
+.btn-agroup,
+.btn-jgroup {
+  border-radius: 15px 15px 0px 0px;
+  width: 11%;
+  height: 30%;
+  color: $black;
+  background-color: #d9dadc;
+  outline: none;
+  border: none;
+  margin: 5px;
+  font-size: 10px;
+}
+
+.btn-agroup {
+  span{
+    font-size: 10px;
+    font-weight: bold;
+  }
+}
+
+.jlb {
+  height: 60px;
+  overflow: auto;
+}
+
+.jbtn {
+  // display: -webkit-box;
+  // display: -ms-flexbox;
+  display: flex;
+  // -webkit-box-pack: end;
+  // -ms-flex-pack: end;
+  justify-content: end;
+  // -webkit-box-orient: vertical;
+  // -webkit-box-direction: normal;
+  // -ms-flex-direction: column;
+  // flex-direction: column;
+  // -webkit-box-align: right;
+  // -ms-flex-align: right;
+  align-items: right;
+}
+
+.btn-jgroup {
+  border-radius: 15px 0px 0px 0px;
+  width: 20%;
+  height: 10%;
+  color: $black;
+}
+
+.A-Fram {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;  
+
+  @include respond-to("mediumDesktop") {
+    flex-direction: column;
+  }
+}
+
+.Abtn-home {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  padding-top: 20px;
+  border-top: #78828a 1px solid;
+  margin-bottom: 55px;
+
+  @include respond-to("mobile") {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+  }
+
+  .btn-agroup-home {
+    @include respond-to("mobile") {
+      margin-right: 20px;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.aframe-right {
+  width: 25%;
+  margin-left: 20px;
+
+  @include respond-to("mediumDesktop") {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+.aframe-left {
+  width: 75%;
+  margin-right: 20px;
+
+  @include respond-to("mediumDesktop") {
+    width: 100%;
+    margin-right: 0;
+  }
+}
+
+span {
+  color: $black;
+}
+
+.aframe {
+  overflow: auto;
+}
+
+.frame {
+  display: block;
+  margin: 10px;
+}
+
+.heading {
+  width: 100%;
+  margin-bottom: 10px;
+  background-color: $rectCard;
+  color: $blue2;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-align: center;
+  padding: 8px 0;
+}
+
+.phase2 {
+  width: 100%;
+}
+
+.phase3,
+.phase2 {
+  background-color: $sidebarSelected;
+}
+
+.App {
+  color: #FFFFFF;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  height: 85%;
+}
+
+.rescontainer-home {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+
+  .recharts-wrapper {
+    .recharts-legend-wrapper {
+      left: 20px !important;
+      top: -10px !important;
+    }
+  }
+}
+
+.input {
+  display: block;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  text-align: center;
+}
+
+p {
+  margin-bottom: 60px;
+}
+
+.speedspan {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex ;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.Afram,
+.JIB {
+  transform: rotate(270deg);
+}
+
+.speedometer-form {
+  position: absolute;
+  top: -30px;
+  left: 260px;
+  z-index: 999;
+}
+
+.rescontainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex ;
+  width: 250px;
+}
+
+.chart {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+
+// added by shark
+.hr-sect {
+  display: flex;
+  flex-basis: 100%;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.35);
+  margin: 8px 0;
+
+  &:before,
+  &:after {
+    content: "";
+    flex-grow: 1;
+    background: rgba(255, 255, 255, 0.35);
+    height: 1px;
+    font-size: 0;
+    line-height: 0;
+    margin: 0 8px;
+  }
+}

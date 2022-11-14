@@ -1,0 +1,24 @@
+@import "_variables.scss";
+@import "_mixins.scss";
+
+.operation-monitor {
+    max-width: 100%;
+    background-color: $sidebarSelected;
+    margin: 70px 0 20px 0;
+    padding-bottom: 20px;
+
+    &-title {
+        background-color: $rectCard;
+        color: $blue2;
+        font-size: 0.9rem;
+        font-weight: bold;
+        text-align: center;
+        padding: 8px 0;
+        margin: 0;
+    }
+
+    .hook-chart {
+        padding: 30px;
+    }
+}
+

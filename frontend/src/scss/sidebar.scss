@@ -1,0 +1,46 @@
+@import "_variables.scss";
+@import "_mixins.scss";
+
+.sidebar {
+    // background: -webkit-linear-gradient(top,  #aab9c3 0%,#708394 100%);
+    background-color: $containerBGColor;
+    max-width: 175px;
+    height: 100vh;
+    margin-left: -15px;
+
+    @include respond-to("iPadViewMax") {
+        max-width: 100%;
+        height: 100%;
+        margin: 0;
+    }
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+            padding: 10px 12px;
+            display: flex;
+            font-size: 0.9rem;
+            transition: hover 0.3s ease-in;
+
+            a {
+                margin: 0;
+                color: #b0c9e0;
+                padding-left: 10px;
+                text-decoration: none;
+            }
+
+            &.sidebar-item {
+                &:hover {
+                    background-color: $sidebarSelected;  
+                }
+            }
+
+            &.selected {
+                background-color: $sidebarSelected;
+            }
+        }
+    }
+}

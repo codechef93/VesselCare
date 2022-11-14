@@ -1,0 +1,51 @@
+@import "_variables.scss";
+@import "_mixins.scss";
+
+.login-home {
+    position: fixed;
+    background-color: $white;
+    inset: 0;
+    z-index: 10;
+    background-image: url(../assets/LoginBG.jpg);
+    background-size: cover;
+
+    @include respond-to("maxMedium") {
+        background-size: 100% 100%;
+    }
+}
+
+.login-brand {
+    margin: 10rem auto 0 auto;
+
+    @include respond-to("mobile") {
+      padding: 0 30px;
+    }
+
+    img {
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+
+        @include respond-to("largeDesktop") {
+          max-width: 800px;
+        }
+    }
+}
+  
+  .login-btn-wrapper {
+    text-align: center;
+    margin-top: 6rem;
+
+    button {
+      background-color: $danger;
+      padding: 1rem 1.4rem;
+      width: 100%;
+      max-width: 300px;
+      font-size: 1rem;
+      text-transform: uppercase;
+  
+      @include respond-to("mobile") {
+        max-width: 150px;
+      }
+    }
+  }

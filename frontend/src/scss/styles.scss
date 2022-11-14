@@ -1,0 +1,87 @@
+@import "_variables.scss";
+@import "_mixins.scss";
+
+body {
+  background-color:$appBG !important;
+  margin: 0;
+  font-family: $PrimaryFonts !important;
+}
+  
+code {
+  font-family: $code;
+}
+
+.section-map {
+  .leaflet-container {
+    height: 600px;
+    width: 100%;
+
+    @include respond-to("iPadPortrait") {
+      height: 700px;
+    }
+  }
+}
+
+.space-between {
+  margin: 50px 0;
+}
+
+.filters {
+  margin: 20px 0 20px 20px;
+
+  &-title {
+      margin-right: 10px;
+      margin-bottom: 0;
+      font-size: 0.8rem;
+  }
+
+  .dropdown {
+    .btn {
+      background-color: $buttonTextBG;
+      border: $sidebarList solid 1px;
+      color: $buttonText;
+      font-size: 0.8rem;
+      font-weight: 600;
+
+      @include respond-to("mobile") {
+        font-size: 0.5rem;
+      }
+    }
+
+    .dropdown-menu {
+      .dropdown-item {
+        font-size: 0.8rem;
+      }
+    }
+
+    &.show {
+      .btn-primary {
+        &.dropdown-toggle {
+          background-color: $buttonTextBG;
+          border: $sidebarList solid 1px;
+          color: $buttonText;
+        }
+      }
+    }
+  }
+  
+  .btn-toolbar {
+    .btn-group {
+      border:  2px solid $buttonGroupBorder;
+      border-radius: 5px;
+
+      .btn {
+        font-size: 0.8rem;
+        font-weight: 600;
+        border: 0;
+        border-right: $sidebarList solid 2px;
+        color: #f0f0f0;
+        background-image: -webkit-linear-gradient(top,  $buttonText 0%,$buttonText 100%);
+
+        @include respond-to("mobile") {
+          font-size: 0.5rem;
+        }
+      }
+    }
+  }
+}
